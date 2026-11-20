@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente los acentos 
+     y caracteristicas especiales como la ñ -->
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+
+    <!-- Ajusta el área de visualizacion al ancho de la pantalla -->
+    <title>Página de Pablo / Peliculas y Deportes</title>
+    <!-- Resumen de el contenido de la pagina, Google puede usarlo 
+     en sus resultados de búsqueda -->
+    <meta name="description" 
+    content="Página de Pablo con información sobre películas 
+    y deportes">
+
+    <!-- name = "keywords" ayuda a los motores de busqueda a identificar 
+     el contenido de de la pagina -->
+    <meta name="keywords" 
+    content="Pablo, películas, deportes, videojuegos, padel, música">
+
+    <!-- name = "author" indica el autor de la pagina -->
+    <meta name="author" 
+    content="Pablo Hernandez Nava">
+
+    <!-- Aviso de contenido propio-->
+     <meta name="copyright" 
+    content="© 2026 Pablo Hernandez Nava. Todos los derechos reservados."> 
+    
+
+    <!-- ACTIVIDAD 3. Cargamos el CSS de Bootstrap desde Internet. -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+<!-- Conectamos nuestro css, debe coincidir en la misma carpeta HTML -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+</head>
+<body>
+
+    <div class="container">
+
+    <!-- Contenido de la pagina, titulo principal de la pagina -- >
+    <! -- style aplica un estilo CSS y color del encabezado -->
+    <h1 style="color: blue;">Bienvenido a la página de Pablo</h1>
+    <!-- Este es un parrafo de ejemplo -->
+    <p>Esta es una página creada con HTML.</p>
+
+    <!-- =========== ALERTA ================= -->
+    <div class="alert alert-info" role="alert">
+        ¡Bienvenido! Aquicomparto mis gustos por el cine, los deportes y la música.
+    </div>
+
+    <!-- =========== BOTONES PARA NAVEGAR  ================= -- >
+    < !-- href indica la ruta del archivo al que se quiere navegar
+     id= "pasatiempos" -->
+     <nav class="navbar navbar-expand-lg bg-light mb-4" 
+        arial-lebel= "Secciones de la pagina">
+        <div class="container-fluid">
+            <!-- href=#inicio lleva al elemento con id="inicio" -->
+            <a class="navbar-brand" href="#inicio">Pagina de Pablo</a>
+
+            <!-- #menu debe de coincidir con el id del menu -->
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#menu" 
+                    aria-controls="menu" 
+                    aria-expanded="false" 
+                    aria-label="Abrir o cerrar el menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- collapse: este es el menú que se abre y se cierra con el botón -->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- Los mismos 3 botones de antes, ahora dentro del menú que colapsa.
+                     En pantalla grande se ven en fila; en celular se esconden
+                     y aparecen uno debajo de otro al tocar el botón ☰ -->
+           
+           <ul class="navbar-nav ms-auto gap-2 py-2 py-lg-0">
+                    <li class="nav-item">
+                        <a href="#pasatiempos" class="btn btn-primary w-100">Mis pasatiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#peliculas" class="btn btn-success w-100">Mis películas favoritas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#planes" class="btn btn-success w-100">Mis planes para desconectarme</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+         <!-- Contenido de la página, titulo principal de la página -->
+     <!--style aplica un estilo CSS y color del encabezado-->
+    <h1 id="inicio" style="color: #2e7d4f;">Bienvenido a la página de Pablo</h1>
+    <!-- Este es un parrafo de ejemplo -->
+    <p>Esta es una simple página web creada con HTML</p>
+
+     <!-- ========== ALERTA ========== -->
+     <div class="alert alert-info" role="alert">
+        ¡Bienvenido! Aquí comparto mis pasatiempos: jugar videojuegos, ver películas, jugar padel.
+     </div>
+
+                    
+    <!-- =========== PRESENTACION ================= -- >
+    <! -- H2 sirve para crear un subtítulo --> 
+    <h2> Me gusta dormir </h2>
+    <!-- H3 Se puede organizar un subtema en el h2 -->
+    <h3>Me gusta jugar padel</h3>
+    <!-- H4 Se utiliza para subdividir aun mas 
+     el contenido de detalles menores-->
+    <h4>Me gusta jugar videojuegos</h4>
+    <!-- H5 Se usa para agrgar detalles adicionales 
+     o informacion especifica -->
+    <h5>Me gusta escuchar música</h5>
+    <!-- H6 Se utiliza para agregar notas o detalles 
+     adicionales muy específicos -->
+    <h6>Me gusta ver películas</h6>
+
+ <!--======== Carrusel =========-->
+    <section class="mt-4">
+        <h2 class="text-primary">Mis gustos en imágenes</h2>
+        <!-- El carrusel crea el componente y slide agrega la transición.
+             El id permite que las flechas encuentren el carrusel.
+             data-bs-ride="carousel" hace que las imágenes cambien solas -->
+        <div id="carrusel" class="carousel slide bg-dark" data-bs-ride="carousel">
+
+            <!-- Indicadores: las rayitas de abajo que muestran en qué imagen vas -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+            </div>
+            <!-- carousel-inner guarda todas las imágenes del carrusel -->
+            <div class="carousel-inner">
+                <!-- carousel-item active es la imagen que se ve primero -->
+                <div class="carousel-item active">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelQ93tZvThP_0MLLRF6RvjUmeohIYxNRjodbN3GpP9RcciZs9pnoT-Bxv&s=1024"
+                        class="d-block w-100"
+                        style="height: 400px; object-fit: cover; object-position: center 70%;"
+                        alt="Imagen de los vengadores">
+                    </div>
+                <div class="carousel-item">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelQ93tZvThP_0MLLRF6RvjUmeohIYxNRjodbN3GpP9RcciZs9pnoT-Bxv&s=1024"
+                        class="d-block w-100"
+                        style="height: 400px; object-fit: cover; object-position: center;"
+                        alt="Imagen videojuegos">
+            
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src=""
+                        class="d-block w-100"
+                        style="height: 400px; object-fit: cover; object-position: center;"
+                        alt="Imagen de padel">
+                    </div>
+            </div>
+            <!-- Flecha para ir a la imagen anterior -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <!-- Flecha para ir a la imagen siguiente -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =========== TARJETAS  ================= -->
+     <section class="mt-4">
+        <h2 class="text-primary"> Mis pasatiempos</h2>
+        <!-- Tarjeta basica card crea el contenedor -->
+        <div class="card mb-4">
+            <!-- card-body crea el contenido de la tarjeta -->
+            <div class="card-body">
+                <h5 class="card-title">Videojuegos</h5>
+                <p class="card-text">Me gusta jugar videojuegos en mi tiempo libre.</p>
+                <!-- BEste enlace lleva a más información sobre videojuegos -->
+                <a href="#planes" class="btn btn-primary">Conoce mis planes </a>
+            </div>
+        </div>
+        <!-- Tarjeta con imagen
+         Usamos la imagen de los vengadores -->
+         <div class="card mb-4">
+            
+
+    <!-- src es la ruta de la imagen, alt describe la imagen 
+     width = "300" especifica el ancho de la imagen a 300 pixeles -->
+     <img src="https://hips.hearstapps.com/hmg-prod/images/vengadores-endgame-66575160add0a.jpg?crop=1xw:1xh;center,top"
+        alt="Imagen de los vengadores" 
+        width="300"
+        class="img-fluid"> 
+
+        <div class="card-body">
+            <h5 class="card-title">Películas</h5>
+            <p class="card-text">Me gusta ver películas de acción y ciencia ficción.</p>
+            <a href="#peliculas" class="btn btn-secondary">Conoce mis películas favoritas</a>
+        </div>
+    </div>
+
+    <!-- Tarjeta con imagen 
+    Usamos la imagen de videojuegos -->
+    <div class="card mb-4">
+        <img 
+            src="https://i.blogs.es/33fb56/samsung-memory-faiwkfvjtz4-unsplash/500_333.jpeg"
+            alt="Imagen de Videojuegos"
+            width="300"
+            class="img-fluid">
+        <div class="card-body">
+            <h5 class="card-title">Videojuegos</h5>
+            <p class="card-text">Me gusta jugar videojuegos de acción y aventura.</p>
+            <a href="#pasatiempos" class="btn btn-success">Conoce mis pasatiempos favoritos</a>
+        </div>
+    </div>
+
+    <img src="Imagen Videojuegos.jpg"
+        alt="Imagen Videojuegos" width="300">
+
+        <!-- Tarjeta con imagen
+        Usamos la imagen de padel -->
+        <div class="card mb-4">
+            <img 
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelQ93tZvThP_0MLLRF6RvjUmeohIYxNRjodbN3GpP9RcciZs9pnoT-Bxv&s=1024"
+                alt="Imagen padel" width="300" class="img-fluid">
+            <div class="card-body">
+                <h5 class="card-title">Padel</h5>
+                <p class="card-text">Me gusta jugar padel en mi tiempo libre.</p>
+                <a href="#pasatiempos" class="btn btn-success">Conoce mis pasatiempos favoritos</a>
+            </div>
+        </div>
+
+        <br>
+        <img src="Imagen padel.jpg"
+        alt="Imagen padel" width="300">
+
+    <!-- LISTA NO ORDENADA -->
+     <section>
+        <h2>Lista de cosas que hago en mi tiempo libre</h2>
+     <!-- ul crea una lista no ordenada, li crea un elemento de la lista -->
+        <ul>
+            <li>Jugar videojuegos</li>
+            <li>Escuchar música</li>
+            <li>Ver películas</li>
+            <li>Jugar padel</li>
+        </ul>
+    </section>  
+
+    <!-- LISTA ORDENADA -->
+    <section>
+        <h2>Mis comidas favoritas </h2>
+        <!-- ol crea una lista ordenada, li crea un elemento de la lista -->
+        <ol>
+            <li>Pizza</li>
+            <li>Hamburguesa</li>
+            <li>Ensalada</li>
+        </ol>
+    </section>
+    
+    <!-- TABLA-->
+    <h2>Mis planes para desconectarme </h2>
+    <table class="table table-striped">
+        <!-- tr crea una celda en la tabla, th crea un encabezado de la tabla -->
+        <tr>
+            <th>Tiempo disponible</th>
+            <th>Planes</th>
+            <th>Que necesito para realizarlo</th>
+        </tr>
+        <!--tr crea una celda de tabla -->
+        <tr>
+            <td>1 hora</td>
+            <td>Jugar videojuegos</td>
+            <td>Consola y juegos</td>
+        </tr>
+        <!--tr crea una celda de tabla -->
+        <tr>
+            <td>2 horas</td>
+            <td>Ver películas</td>
+            <td>Televisión y películas</td>
+        </tr>
+        <!--tr crea una celda de tabla -->
+        <tr>
+            <td>3 horas</td>
+            <td>Jugar padel</td>
+            <td>Raqueta y pelota</td>
+        </tr>
+    </table>
+
+
+<!-- ACTIVIDAD 3. Cargamos el JavaScript de Bootstrap.Se usa en componentes interactivos, como los menús desplegables. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
